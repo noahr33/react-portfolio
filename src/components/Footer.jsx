@@ -3,7 +3,7 @@ import './footer.css'
 
 const Footer = () => {
   return (
-    <footer className="fixed-bottom bg-dark d-flex justify-content-center align-items-center p-3">
+    <footer className="fixed-bottom bg-dark d-flex justify-content-center align-items-center p-2 bg-gradient">
       <a
         href="https://github.com/noahr33"
         className="icon-link icon-link-hover text-decoration-none"
