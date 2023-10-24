@@ -1,0 +1,33 @@
+.contain {
+  margin-top: 3rem;
+}
+
+.cards {
+  transition: all 0.75s;
+}
+
+img {
+  width: 100%;
+}
+.cards:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cards:hover > img {
+  filter: blur(2px);
+}
+
+.links {
+  color: black;
+  font-size: 30px;
+  transition: all 0.4s;
+}
+
+.links:hover {
+  color: rgb(255, 255, 255);
+}
+
+.bi {
+  text-decoration: none;
+}
