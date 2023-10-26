@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import './portfolio.scss'
+import Project from './Project.jsx'
+import TEST from '../assets/Gourmet.jpg'
 
 const projects = [
   {
-    title: 'test 1',
-    deployed: '#',
-    github: 'test github',
+    title: 'Gourmet Guide',
+    deployed: 'https://gourmet-guide11-85962ead4ef2.herokuapp.com/',
+    githubLink: 'https://github.com/adamolson11/Gourmet-Guide',
     img: 'src/assets/sign-right-icon.png',
   },
   {
@@ -16,34 +18,37 @@ const projects = [
   },
 ]
 
-const Portfolio = () => {
-  const [isShown, setIsShown] = useState(false)
+const imageStyle = {
+  width: 50,
+  backgroundImage: 'url(' + projects.img + ')',
+}
 
+const Portfolio = () => {
   return (
     <div className="contain">
-      <h2>My Projects</h2>
-      <div className="container row m-3">
+      <h2 className="text-center mb-5">My Projects</h2>
+      <div className="container d-flex justify-content-evenly  m-3">
         {projects.map((project) => {
           return (
             <div
-              className="cards col-3 position-relative p-0"
-              onMouseEnter={() => setIsShown(true)}
-              onMouseLeave={() => setIsShown(false)}
+              className="project-card rounded border"
+              style={{ backgroundImage: `url(${TEST})` }}
             >
-              <img src={project.img} alt="" />
-              {isShown && (
-                <div className="position-absolute bottom-0 start-0 col-12 d-flex align-items-center justify-content-center ms-2">
-                  <a href={project.deployed} className="text-decoration-none">
-                    <p className="links mt-2">{project.title}</p>
-                  </a>
-                  <a href={project.github} className="text-decoration-none">
-                    <i
-                      className="links bi bi-github"
-                      style={{ fontSize: 40 }}
-                    ></i>
-                  </a>
+              <a href={project.deployed} className="text-decoration-none links">
+                <div className="link-box title rounded-top">
+                  <div className="title-box rounded-top">
+                    <p className="fs-4">{project.title}</p>
+                  </div>
                 </div>
-              )}
+              </a>
+              <a
+                href={project.githubLink}
+                className="text-decoration-none links d-flex align-items-center"
+              >
+                <div className="link-box git-link rounded-bottom">
+                  <i className="bi bi-github" style={{ fontSize: 20 }}></i>
+                </div>
+              </a>
             </div>
           )
         })}

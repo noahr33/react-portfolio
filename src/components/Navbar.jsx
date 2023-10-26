@@ -1,4 +1,9 @@
 import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
+
+const active = {
+  color: 'red',
+}
 
 const Navbar = () => {
   return (
@@ -7,18 +12,50 @@ const Navbar = () => {
         <h1 className="fs-2">Noah Koleske</h1>
       </div>
       <div className="d-flex justify-content-center gap-4 fs-6">
-        <Link to="/" className="text-light text-decoration-none">
+        <NavLink
+          to="/"
+          className=" text-decoration-none"
+          style={({ isActive }) => {
+            return {
+              color: isActive ? '#f05252' : 'white',
+            }
+          }}
+        >
           About Me
-        </Link>
-        <Link to="/portfolio" className="text-light text-decoration-none">
+        </NavLink>
+        <NavLink
+          to="/portfolio"
+          className="text-decoration-none"
+          style={({ isActive }) => {
+            return {
+              color: isActive ? '#f05252' : 'white',
+            }
+          }}
+        >
           Portfolio
-        </Link>
-        <Link to="/contact" className="text-light text-decoration-none">
+        </NavLink>
+        <NavLink
+          to="/contact"
+          className="text-decoration-none"
+          style={({ isActive }) => {
+            return {
+              color: isActive ? '#f05252' : 'white',
+            }
+          }}
+        >
           Contact Me
-        </Link>
-        <Link to="/resume" className="text-light text-decoration-none">
+        </NavLink>
+        <NavLink
+          to="/resume"
+          className="text-decoration-none"
+          style={({ isActive }) => {
+            return {
+              color: isActive ? '#f05252' : 'white',
+            }
+          }}
+        >
           Resume
-        </Link>
+        </NavLink>
       </div>
     </nav>
   )

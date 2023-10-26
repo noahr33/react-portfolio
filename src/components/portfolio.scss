@@ -2,32 +2,59 @@
   margin-top: 3rem;
 }
 
-.cards {
+.project-card {
   transition: all 0.75s;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 25%;
+  height: 230px;
 }
 
-img {
-  width: 100%;
-}
-.cards:hover {
+.project-card:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: brightness(1.2);
 }
 
-.cards:hover > img {
-  filter: blur(2px);
+.title {
+  height: 75%;
+}
+
+.title-box {
+  background: rgb(193, 82, 82);
+  transition: all 0.5s;
+}
+
+.git-link {
+  // height: 10%;
+  // display: flex;
+  height: 25%;
+  // z-index: 1;
+}
+
+.link-box {
+  text-align: center;
+  width: 100%;
+  transition: all 0.5s;
 }
 
 .links {
-  color: black;
+  color: rgb(0, 0, 0);
   font-size: 30px;
   transition: all 0.4s;
+  // display: none;
 }
 
-.links:hover {
+.link-box:hover {
+  background-color: rgb(0, 0, 0);
+  opacity: 70%;
+}
+
+.link-box:hover .links {
   color: rgb(255, 255, 255);
 }
 
-.bi {
-  text-decoration: none;
+.link-box:hover .title-box {
+  color: rgb(255, 255, 255);
+  background: none;
 }
