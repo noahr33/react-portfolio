@@ -5,14 +5,8 @@ const Contact = () => {
   const { register, handleSubmit } = useForm()
   const onSubmit = null
 
-  const handleMouseLeave = (event) => {
-    console.log(event)
-  }
-
-  const [required, setRequired] = useState('required')
-
   return (
-    <div className="container m-5 col-6">
+    <div className="container m-auto mt-5 col-6 bg-light p-4 rounded-3">
       <h2>Contact</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-3">
@@ -28,17 +22,19 @@ const Contact = () => {
           />
         </div>
         <div className="mb-3">
-          <label
-            className="form-label"
-            htmlFor="emailInput"
+          <label className="form-label" htmlFor="emailInput">
+            Email
+          </label>
+          <input
+            type="email"
+            className="form-control"
+            id="emailInput"
             {...register('email', {
               required: true,
               pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
             })}
-          >
-            Email
-          </label>
-          <input type="email" className="form-control" id="emailInput" />
+            onMouseLeave={(e) => (e.target.placeholder = 'Required')}
+          />
         </div>
         <div className="mb-3 form-floating">
           <textarea

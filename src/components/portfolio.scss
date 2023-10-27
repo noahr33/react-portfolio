@@ -12,7 +12,8 @@
 
 .project-card:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2),
+    0 6px 20px 0 rgba(255, 255, 255, 0.19);
   filter: brightness(1.2);
 }
 
@@ -26,10 +27,7 @@
 }
 
 .git-link {
-  // height: 10%;
-  // display: flex;
   height: 25%;
-  // z-index: 1;
 }
 
 .link-box {
@@ -42,7 +40,6 @@
   color: rgb(0, 0, 0);
   font-size: 30px;
   transition: all 0.4s;
-  // display: none;
 }
 
 .link-box:hover {
