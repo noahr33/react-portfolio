@@ -9,6 +9,7 @@ This is my portfolio using React.
 - [Installation](#installation)
 - [Usage](#usage)
 - [Screenshot](#screenshot)
+- [Deployed Link](#deployed-link)
 
 ## Installation
 
