@@ -40,12 +40,6 @@ const projects = [
     githubLink: '#',
     img: 'https://placehold.co/400',
   },
-  {
-    title: 'New Project',
-    deployed: '#',
-    githubLink: '#',
-    img: 'https://placehold.co/400',
-  },
 ]
 
 const imageStyle = {
